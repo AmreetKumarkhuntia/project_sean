@@ -1,0 +1,22 @@
+.home{
+    height: 90vh;
+    background-image: url("../../assets/steps.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h3{
+        margin: 4%
+    }
+    .form-control{
+        margin: auto;
+        width: 80%;
+
+        &:focus{
+            outline: crimson;
+        }
+    }
+
+    .displayPredictions{
+        margin: 4%;
+    }
+}

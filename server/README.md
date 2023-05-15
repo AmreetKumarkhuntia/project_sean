@@ -1,2 +1,0 @@
-# SEAN_Django
- 

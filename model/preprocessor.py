@@ -7,7 +7,7 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 import numpy as np
 
 # load the dataset
-data = pd.read_csv('model_data/IMDB Dataset.csv')
+data = pd.read_csv('IMDB Dataset.csv')
 
 print('Loading dataset')
 
@@ -19,7 +19,7 @@ binary_labels = np.array([1 if label == 'positive' else 0 for label in labels])
 
 # split the data into training and testing sets
 train_texts, test_texts, train_labels, test_labels = train_test_split(
-    texts, binary_labels, test_size=0.2, random_state=42)
+    texts, binary_labels, test_size=0.3, random_state=42)
 
 # tokenize the text
 tokenizer = Tokenizer(num_words=10000, oov_token="<OOV>")
@@ -38,9 +38,9 @@ test_sequences = tokenizer.texts_to_sequences(test_texts)
 
 # pad the sequences to have the same length
 train_padded = pad_sequences(
-    train_sequences, maxlen=100, padding='post', truncating='post')
+    train_sequences, maxlen=1000, padding='post', truncating='post')
 test_padded = pad_sequences(
-    test_sequences, maxlen=100, padding='post', truncating='post')
+    test_sequences, maxlen=1000, padding='post', truncating='post')
 
 # The pad_sequences() function is used to ensure that all sequences in a list have the same length. In the case of natural language
 #  processing,we often have sentences of varying lengths, and we need to pad them so that they all have the same length in order to pass them to a neural 
