@@ -40,7 +40,7 @@ def predict(request):
         else:
             return JsonResponse({"Predictions": "Invalid input"})
 
-        if prediction > 0.47:
+        if prediction > 0.4:
             sentiment = "positive"
         else:
             sentiment = "negative"
@@ -51,5 +51,6 @@ def predict(request):
             "Predictions": sentiment,
             "PredictionNumber": prediction_number
         })
+        
     else:
         return JsonResponse({"Predictions": "Invalid method"})
