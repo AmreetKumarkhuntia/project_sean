@@ -1,5 +1,7 @@
 /__pycache__
-/model_data
 IMDB Dataset.csv
 
 /preprocessed_data.pickle
+
+/sentimental_analysis_model.h5
+
