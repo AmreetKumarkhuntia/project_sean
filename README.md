@@ -1,2 +1,2 @@
-# project_sean
+# Project Sean
  
