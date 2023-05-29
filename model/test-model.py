@@ -18,7 +18,7 @@ input_padded = pad_sequences(input_seq, maxlen=1000, padding='post', truncating=
 prediction = model.predict(input_padded)[0][0]
 
 # print the prediction result
-if prediction < 0.46:
+if prediction < 0.5:
     print("The input review is negative.")
     print(prediction);
 else:
