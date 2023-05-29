@@ -9,7 +9,7 @@ with open('preprocessed_data.pickle', 'rb') as f:
 
 
 model = keras.Sequential([
-    layers.Embedding(input_dim=10000, output_dim=16, input_length=1000),
+    layers.Embedding(input_dim=100000, output_dim=32, input_length=1000),
     layers.GlobalAveragePooling1D(),
     layers.Dense(16, activation='relu'),
     layers.Dense(1, activation='sigmoid')
